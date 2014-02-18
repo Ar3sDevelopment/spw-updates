@@ -31,6 +31,6 @@ exports.manage_post = function(post, cb) {
 	cb(0, null);
 };
 
-exports.updatetime = 1 * 60 * 60 * 1000;
-exports.title = 'USB Devices';
+exports.updatetime = 5 * 60 * 1000;
+exports.title = 'Updates Info';
 exports.columns = 6;
