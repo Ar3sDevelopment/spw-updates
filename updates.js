@@ -5,7 +5,7 @@ exports.data = function(cb) {
 		updates : []
 	};
 
-	exec("/usr/bin/sudo /usr/bin/apt-get --just-print upgrade", function(err, stdout, stderr) {
+	exec("/usr/bin/sudo /usr/bin/apt-get --just-print upgrade", function(err, stdout) {
 		if (!err) {
 			var updates = stdout.split(/[\r\n]{1,2}/);
 			for (var c = 0; c < updates.length; c++) {
@@ -31,6 +31,6 @@ exports.manage_post = function(post, cb) {
 	cb(0, null);
 };
 
-exports.updatetime = 5 * 60 * 1000;
+exports.updatetime = 60 * 60 * 1000;
 exports.title = 'Updates Info';
 exports.columns = 6;
