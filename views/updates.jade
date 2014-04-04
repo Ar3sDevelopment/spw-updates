@@ -36,5 +36,5 @@ script(type="text/javascript").
 	}
 
 	function updateUpdatesGrid() {
-		$.startUpdatingWidgetJson(socket, #{user_widget.id}, '#{sid}', callbackUpdateUpdatesGrid, null);
+		$.startUpdatingWidgetJson(socket, #{user_widget.id}, '#{username}', callbackUpdateUpdatesGrid, null);
 	}
